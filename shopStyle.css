@@ -17,12 +17,13 @@ header a {
     display: flex;
     justify-content: space-around;
 }
-header button {
-    height: 80%;
-    width: 70%;
+header .cart {
+    /* height: 80%;
+    width: 70%; */
     grid-column: 3;
     justify-self: center;
     align-self: center;
+    padding-left: 30%;
 }
 .nav-b {
     height: 50%;
