@@ -1,17 +1,139 @@
 /* Style for a shopping cart example page that im creating */
 
+/* General page styles */
+
 /* Header section */
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+header a {
+    align-self: center;
+    justify-self: center;
+}
+.head-nav {
+    list-style: none;
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+}
 header button {
-    height: 10%;
-    width: 5%;
+    height: 80%;
+    width: 70%;
+    grid-column: 3;
+    justify-self: center;
+    align-self: center;
+}
+.nav-b {
+    height: 50%;
+    width: 50%;
 }
 header button img {
-    height: 50%;
-    width: 80%;
+    height: 100%;
+    width: 60%;
 }
 
 /* Main section */
+h1 {
+    text-align: center;
+}
+main h4 {
+    text-align: center;
+}
+.shop-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+}
+.i1 {
+    grid-area: 1 / 1 / 2 / 2 ;
+}
+.i2 {
+    grid-area: 1 / 2 / 2 / 3 ;
+}
+.i3 {
+    grid-area: 1 / 3 / 2 / 4 ;
+}
+.i4 {
+    grid-area: 2 / 1 / 3 / 2 ;
+}
+.i5 {
+    grid-area: 2 / 2 / 3 / 3 ;
+}
+.i6 {
+    grid-area: 2 / 3 / 3 / 4 ;
+}
 .shop-item img {
     height: 300px;
     width: 200px;
+}
+.add-btn {
+    background-color: green;
+}
+
+/* Cart section */
+.cart-headings {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+.cart-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    margin-bottom: 3%;
+}
+.cartItem-image {
+    justify-self: center;
+    height: 9em;
+    width: 7em;
+}
+.cart-item p {
+    justify-self: center;
+    align-self: center;
+}
+.cart-item input {
+    justify-self: center;
+    align-self: center;
+    height: 20%;
+    width: 15%;
+}
+.remv-btn {
+    justify-self: center;
+    align-self: center;
+    background-color: red;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+#checkOut {
+    display: inline-block;
+    height: 5em;
+    width: 7em;
+    background-color: gold;
+    margin-left: 8em;
+}
+#close {
+    display: inline-block;
+    height: 5em;
+    width: 7em;
+    background-color: grey;
+    margin-left: 45em;
+}
+
+/* Footer section */
+footer {
+    display: grid;
+    grid-template-rows: 2fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+} 
+.left {
+    grid-area: 1 / 1 / 2 / 2 ;
+}
+.right {
+    grid-area: 1 / 2 / 2 / 3 ;
+}
+.bottom {
+    grid-area: 2 / 1 / 3 / 3 ;
 }
