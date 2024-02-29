@@ -108,6 +108,11 @@ main h4 {
     width: 50%;
     border-radius: 50%;
 }
+#cartTotal h3,
+#cartTotal p {
+    display: inline-block;
+    margin-left: 2em;
+}
 #checkOut {
     display: inline-block;
     height: 5em;
