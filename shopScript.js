@@ -36,14 +36,32 @@ for (i =0; i < addToCartBtns.length; i++) {
         const imageSrc = shopItem.getElementsByClassName('shopItem-image')[0].src ;
         console.log(title, price, imageSrc) ;
         addItemToCart(title, price, imageSrc) ;
+        updateCartTotal () ;
     })
 }
 
 const addItemToCart = (title, price, imageSrc) => {
     const cartRow = document.createElement('div') ;
-    cartRow.innerText = title ;
+    cartRow.classList.add('cart-item');
     const cartItems = document.getElementsByClassName('cart-items')[0] ;
-    cartItems.append(cartRow)
+    const cartItemNames = cartItems.getElementsByClassName('cart-title') ;
+    for (i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart') ;
+            return ;
+        }
+    }
+    const cartItemContent = `
+        <img class="cartItem-image"  src="${imageSrc}">
+        <p class="cart-title">${title}</p>
+        <p class="item-price">${price}</p>
+        <input type="number" class="item-quantity">
+        <button class="btn remv-btn">Remove</button>
+        `
+    cartRow.innerHTML = cartItemContent ;
+    cartItems.append(cartRow) ;
+    cartRow.getElementsByClassName('remv-btn')[0].addEventListener('click', removeCartItem) ;
+    cartRow.getElementsByClassName('item-quantity')[0].addEventListener('change', quantityChanged)
 }
 
 

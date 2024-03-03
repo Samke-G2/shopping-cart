@@ -98,16 +98,19 @@ main h4 {
     padding-left: 3em;
 }
 .cart-item .item-price {
+    grid-area: 1 / 2 / 2 / 3 ;
     justify-self: center;
     align-self: center;
 }
 .cart-item input {
+    grid-area: 1 / 3 / 2 / 4 ;
     justify-self: center;
     align-self: center;
     height: 20%;
     width: 15%;
 }
 .remv-btn {
+    grid-area: 1 / 4 / 2 / 5 ;
     justify-self: center;
     align-self: center;
     background-color: red;
