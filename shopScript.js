@@ -25,10 +25,26 @@ for (i = 0; i < quantityInputs.length; i ++) {
     })
 }
 
+const addToCartBtns = document.getElementsByClassName('add-btn') ;
+for (i =0; i < addToCartBtns.length; i++) {
+    const button = addToCartBtns[i] ;
+    button.addEventListener('click', addBtnClicked = (event) => {
+        const button = event.target ;
+        const shopItem = button.parentElement ;
+        const title = shopItem.getElementsByClassName('shop-item-title')[0].innerText ;
+        const price = shopItem.getElementsByClassName('shopI-price')[0].innerText ;
+        const imageSrc = shopItem.getElementsByClassName('shopItem-image')[0].src ;
+        console.log(title, price, imageSrc) ;
+        addItemToCart(title, price, imageSrc) ;
+    })
+}
 
-// these are teh functions that make the event listeners work
-
-
+const addItemToCart = (title, price, imageSrc) => {
+    const cartRow = document.createElement('div') ;
+    cartRow.innerText = title ;
+    const cartItems = document.getElementsByClassName('cart-items')[0] ;
+    cartItems.append(cartRow)
+}
 
 
 const updateCartTotal = () => {
