@@ -18,8 +18,6 @@ header a {
     justify-content: space-around;
 }
 header .cart {
-    /* height: 80%;
-    width: 70%; */
     grid-column: 3;
     justify-self: center;
     align-self: center;
@@ -45,6 +43,9 @@ main h4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     grid-template-rows: 1fr 1fr ;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 2em;
 }
 .i1 {
     grid-area: 1 / 1 / 2 / 2 ;
@@ -64,9 +65,17 @@ main h4 {
 .i6 {
     grid-area: 2 / 3 / 3 / 4 ;
 }
-.shop-item img {
+.shop-item .portrait{
     height: 300px;
     width: 200px;
+}
+.shop-item .wide {
+    height: 300px;
+    width: 230px;
+}
+.shop-item .landscape {
+    height: 200px;
+    width: 300px;
 }
 .add-btn {
     background-color: green;
@@ -136,6 +145,9 @@ main h4 {
     width: 7em;
     background-color: grey;
     margin-left: 45em;
+}
+.hide {
+    display: none;
 }
 
 /* Footer section */

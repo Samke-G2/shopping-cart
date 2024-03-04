@@ -81,5 +81,5 @@ const addItemToCart = (title, price, imageSrc) => {
     cartRow.innerHTML = cartItemContent ;
     cartItems.append(cartRow) ;
     cartRow.getElementsByClassName('remv-btn')[0].addEventListener('click', removeCartItem) ;
-    cartRow.getElementsByClassName('item-quantity')[0].addEventListener('change', quantityChanged)
+    cartRow.getElementsByClassName('item-quantity')[0].addEventListener('change', quantityChanged) ;
 }
