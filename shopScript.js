@@ -1,9 +1,8 @@
 // Script for a shopping cart exercise I'm creating
 console.log("SHOPPING CART PROJECT!!!") ;
 
-// Addng event listeners
+// Removes cart items when the 'remove' button is pressed
 const removeCartItemBtns = document.getElementsByClassName('remv-btn') ;
-console.log(removeCartItemBtns) ;
 for (i = 0; i < removeCartItemBtns.length; i++) {
     const button = removeCartItemBtns[i] 
     button.addEventListener('click', removeCartItem = (event) => {
@@ -13,6 +12,25 @@ for (i = 0; i < removeCartItemBtns.length; i++) {
     })
 } ;
 
+// Updates the 'Total' of all prices in the cart
+const updateCartTotal = () => {
+    const cartContainer = document.getElementsByClassName('cart-items')[0] ;
+    const cartItem = cartContainer.getElementsByClassName('cart-item') ;
+    let total = 0 ;
+    for (i = 0; i < cartItem.length; i++) {
+       const row = cartItem[i] ;
+       const priceElement = row.getElementsByClassName('item-price')[0] ;
+       const quantityInput = row.getElementsByClassName("item-quantity")[0] ;
+       const price = parseFloat(priceElement.innerText.replace('R', '')) ;
+       const quantity = quantityInput.value ;
+       total = total + (price*quantity) ;
+    }
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-amount')[0].innerText = 'R' + total ;
+}
+
+
+// Ensures that quantity input is a positive integer and then updates cart total
 const quantityInputs = document.getElementsByClassName('item-quantity') ;
 for (i = 0; i < quantityInputs.length; i ++) {
     const input = quantityInputs[i] ;
@@ -25,6 +43,7 @@ for (i = 0; i < quantityInputs.length; i ++) {
     })
 }
 
+// identifies elements in teh shop catalogue that need to be transfered to the cart
 const addToCartBtns = document.getElementsByClassName('add-btn') ;
 for (i =0; i < addToCartBtns.length; i++) {
     const button = addToCartBtns[i] ;
@@ -40,6 +59,7 @@ for (i =0; i < addToCartBtns.length; i++) {
     })
 }
 
+//Adds items to cart, with proper classes
 const addItemToCart = (title, price, imageSrc) => {
     const cartRow = document.createElement('div') ;
     cartRow.classList.add('cart-item');
@@ -62,21 +82,4 @@ const addItemToCart = (title, price, imageSrc) => {
     cartItems.append(cartRow) ;
     cartRow.getElementsByClassName('remv-btn')[0].addEventListener('click', removeCartItem) ;
     cartRow.getElementsByClassName('item-quantity')[0].addEventListener('change', quantityChanged)
-}
-
-
-const updateCartTotal = () => {
-     const cartContainer = document.getElementsByClassName('cart-items')[0] ;
-     const cartItem = cartContainer.getElementsByClassName('cart-item') ;
-     let total = 0 ;
-     for (i = 0; i < cartItem.length; i++) {
-        const row = cartItem[i] ;
-        const priceElement = row.getElementsByClassName('item-price')[0] ;
-        const quantityInput = row.getElementsByClassName("item-quantity")[0] ;
-        const price = parseFloat(priceElement.innerText.replace('R', '')) ;
-        const quantity = quantityInput.value ;
-        total = total + (price*quantity) ;
-     }
-     total = Math.round(total * 100) / 100
-     document.getElementsByClassName('cart-total-amount')[0].innerText = 'R' + total ;
 }
