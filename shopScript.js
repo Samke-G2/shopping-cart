@@ -75,7 +75,7 @@ const addItemToCart = (title, price, imageSrc) => {
         <img class="cartItem-image"  src="${imageSrc}">
         <p class="cart-title">${title}</p>
         <p class="item-price">${price}</p>
-        <input type="number" class="item-quantity">
+        <input type="number" class="item-quantity" min="0" max="5">
         <button class="btn remv-btn">Remove</button>
         `
     cartRow.innerHTML = cartItemContent ;
