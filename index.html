@@ -16,9 +16,10 @@
     <header>
         <a><h3 class="logo"><span id="logo1">izinto</span><span id="logo2">e</span><span id="logo3">Zinhle</span><span id="period">.</span></h3></a>
         <ul class="head-nav">
-            <li><a class="local-links" href="#">Home</a></li>
-            <li><a class="local-links" href="#">Products</a></li>
-            <li><a class="local-links" href="#">Contact</a></li>
+            <li><a class="local-links" href="#logo1">Home</a></li>
+            <li><a class="local-links" href="#products">Products</a></li>
+            <li><a class="local-links" href="#contact">Contact</a></li>
+            <li><a class="local-links" href="#about">About</a></li>
         </ul>
         <a class="cart" href="#shopping-cart">
             <button class="nav-b">
@@ -28,10 +29,10 @@
     </header>
 
     <!-- Main content section -->
-    <main>
+    <main >
         <h1>Masterpieces at Your Fingertips</h1>
         <br>
-        <div class="shop-items">
+        <div class="shop-items" id="products">
             <div class="shop-item i1">
                 <h3 class="shop-item-title">Sneakers</h3>
                 <br>
@@ -87,7 +88,7 @@
 
             <hr>
             <hr>
-            <h2 class="cart-title">My Cart</h2>
+            <h2 class="cart-topper">My Cart</h2>
             <div class="cart-headings">
                 <h3 class="cart-head">Item</h3>
                 <h3 class="cart-head">Price</h3>
@@ -118,7 +119,7 @@
     </main>
     <footer>
         <div class="left">
-            <h3>About Us</h3>
+            <h3 id="about">About Us</h3>
             <p>
                 We strive to connect art enthusiasts with exceptional creations, <br>making it easier than ever to bring a touch of beauty and inspiration into your home.  <br>
                 Join us on this journey of exploration and discovery, <br>where every purchase supports the vision and dedication of our featured artist."
@@ -127,21 +128,20 @@
         <div class="right">
             <h3 id="contact">Contact</h3>
             <p>
-                <strong>Call</strong>: (012)-345-6789
+                <strong>Call</strong>: <span>(012)-345-6789</span>
                 <br>
-                <strong>Email</strong>: email.contact@art.com
+                <strong>Email</strong>: <span>email.contact@art.com</span>
                 <br>
                 <strong>Leave A Comment</strong>:   <br>
-                <textarea rows="3" cols="20"></textarea>    <br>
-                <button>submit</button>
+                <textarea rows="5" cols="25" class="comment"></textarea>    <br>
+                <button class="submit">submit</button>
             </p>
         </div>
         <div class="bottom">
             <hr>
-            Art store &copy; 2024 
-            <a><img class="socials"></a>
-            <a><img class="socials"></a>
-            <a><img class="socials"></a>
+            izintoezinhle. &copy; 2024 
+            <a href="https://github.com/Samke-G2"><img src="./resources/git.png" class="socials" id="github"></a>
+            <a href="https://www.instagram.com/izintoezinhle/?hl=en"><img src="./resources/insta.jpeg" class="socials" id="instagram"></a>
         </div>
     </footer>
     

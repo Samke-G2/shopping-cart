@@ -139,15 +139,22 @@ h1 {
 }
 .add-btn:hover {
     background-color: #fd9fd4;
+    letter-spacing: 0.05em;
 }
 
 /* Cart section */
+.cart-topper {
+    font-family:  "Playfair Display", serif;
+    letter-spacing: 0.05em;
+}
 .cart-headings {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     justify-items: center;
     align-items: center;
     margin-bottom: 2%;
+    font-family:  "Playfair Display", serif;
+    letter-spacing: 0.05em;
 }
 .cart-item {
     display: grid;
@@ -165,11 +172,14 @@ h1 {
     justify-self: center;
     align-self: center;
     padding-left: 3em;
+    font-family: "Belleza", sans-serif;
+
 }
 .cart-item .item-price {
     grid-area: 1 / 2 / 2 / 3 ;
     justify-self: center;
     align-self: center;
+    font-family: "Belleza", sans-serif;
 }
 .cart-item input {
     grid-area: 1 / 3 / 2 / 4 ;
@@ -186,42 +196,74 @@ h1 {
     height: 50%;
     width: 50%;
     border-radius: 50%;
+    font-family: "Belleza", sans-serif;
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 0.07em;
 }
 #cartTotal h3,
 #cartTotal p {
     display: inline-block;
     margin-left: 2em;
+    font-family: "Belleza", sans-serif;
 }
 #checkOut {
     display: inline-block;
     height: 5em;
     width: 7em;
     background-color: gold;
-    margin-left: 8em;
-}
-#close {
-    display: inline-block;
-    height: 5em;
-    width: 7em;
-    background-color: grey;
-    margin-left: 45em;
+    margin-left: 46em;
+    border-radius: 35%;
 }
 .hide {
     display: none;
+    /* This is the everpresent cart item to ensure the js code for the subsequent cart items works as intended */
 }
 
 /* Footer section */
 footer {
     display: grid;
-    grid-template-rows: 2fr 0.5fr ;
+    grid-template-rows: 2fr 0.4fr ;
     grid-template-columns: 1fr 1fr;
 } 
 .left {
     grid-area: 1 / 1 / 2 / 2 ;
 }
+#about {
+    text-decoration: underline;
+}
+.left p {
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+}
 .right {
     grid-area: 1 / 2 / 2 / 3 ;
+    justify-self: center;
+}
+#contact {
+    text-decoration: underline;
+}
+.right p {
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+}
+.right span {
+    color: white;
+}
+.right span:hover {
+    color: grey;
 }
 .bottom {
+    color: white;
     grid-area: 2 / 1 / 3 / 3 ;
+    text-align: center;
+}
+.socials {
+    margin-left: 60em;
+    height: 50%;
+    width: 3%;
+    border-radius: 50%;
+}
+#instagram {
+    margin: 0;
 }
