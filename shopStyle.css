@@ -1,11 +1,45 @@
 /* Style for a shopping cart example page that im creating */
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* General page styles */
-
+/* General page styles*/
+body {
+    background-color: black;
+    color: red;
+    /* font-family: "Belleza", sans-serif;       /* For small text */
+    /*font-family: "Playfair Display", serif; */   /* For headings and such  */
+}
 /* Header section */
 header {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
+}
+.logo {
+    cursor: pointer;
+}
+.logo:hover {
+    color: #ba91b6 ;
+}
+.logo span {
+    font-family: "Belleza", sans-serif;
+    font-size: 2em;
+}
+#logo1 {
+    color: white;
+}
+#logo1:hover {
+    color: #ba91b6;
+}
+#logo2 {
+    font-family: "Playfair Display", serif;
+}
+#logo3 {
+    color: white;
+}
+#logo3:hover {
+    color: #ba91b6;
+}
+#period {
+    font-size: 4em;
 }
 header a {
     align-self: center;
@@ -13,9 +47,24 @@ header a {
 }
 .head-nav {
     list-style: none;
-    align-self: center;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
+    align-self: stretch;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    margin-top: 7%;
+    font-size: 1.5em;
+}
+.head-nav .local-links {
+    color: white;
+    text-decoration: none;
+}
+.head-nav .local-links:hover {
+    color: red;
+    border-bottom: solid 3px;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 header .cart {
     grid-column: 3;
@@ -26,6 +75,7 @@ header .cart {
 .nav-b {
     height: 50%;
     width: 50%;
+    border-radius: 40%;
 }
 header button img {
     height: 100%;
@@ -35,9 +85,8 @@ header button img {
 /* Main section */
 h1 {
     text-align: center;
-}
-main h4 {
-    text-align: center;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.07em;
 }
 .shop-items {
     display: grid;
@@ -46,6 +95,11 @@ main h4 {
     justify-items: center;
     align-items: center;
     grid-row-gap: 2em;
+}
+.shop-item-title {
+    color: white;
+    font-family: "Belleza", sans-serif;
+    letter-spacing: 0.05em;
 }
 .i1 {
     grid-area: 1 / 1 / 2 / 2 ;
@@ -68,17 +122,23 @@ main h4 {
 .shop-item .portrait{
     height: 300px;
     width: 200px;
+    border: solid red 7px;
 }
 .shop-item .wide {
     height: 300px;
     width: 230px;
+    border: solid red 7px;
 }
 .shop-item .landscape {
     height: 200px;
     width: 300px;
+    border: solid red 7px;
 }
 .add-btn {
-    background-color: green;
+    background-color: grey;
+}
+.add-btn:hover {
+    background-color: #ba91b6;
 }
 
 /* Cart section */
@@ -153,7 +213,7 @@ main h4 {
 /* Footer section */
 footer {
     display: grid;
-    grid-template-rows: 2fr 1fr ;
+    grid-template-rows: 2fr 0.5fr ;
     grid-template-columns: 1fr 1fr;
 } 
 .left {

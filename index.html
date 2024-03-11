@@ -6,15 +6,19 @@
     <title>Shopping cart</title>
     <link rel="icon" type="favicon" href="./resources/aIcon1.png">
     <link rel="stylesheet" href="./shopStyle.css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Section -->
     <header>
-        <a><h3 class="logo">ART STORE</h3></a>
+        <a><h3 class="logo"><span id="logo1">izinto</span><span id="logo2">e</span><span id="logo3">Zinhle</span><span id="period">.</span></h3></a>
         <ul class="head-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="local-links" href="#">Home</a></li>
+            <li><a class="local-links" href="#">Products</a></li>
+            <li><a class="local-links" href="#">Contact</a></li>
         </ul>
         <a class="cart" href="#shopping-cart">
             <button class="nav-b">
@@ -25,15 +29,14 @@
 
     <!-- Main content section -->
     <main>
-        <h1>Title for the page</h1>
-        <h4>a cool slogan to use</h4>
+        <h1>Masterpieces at Your Fingertips</h1>
         <br>
         <div class="shop-items">
             <div class="shop-item i1">
                 <h3 class="shop-item-title">Sneakers</h3>
                 <br>
                 <img class="shopItem-image portrait" src="./resources/shop-items/sneakers.jpg">
-                <p class="shopI-price">R25.00</p>
+                <p class="shopI-price">R250.00</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -41,7 +44,7 @@
                 <h3 class="shop-item-title">Halo</h3>
                 <br>
                 <img class="shopItem-image wide" src="./resources/shop-items/halo.jpg">
-                <p class="shopI-price">R30.99</p>
+                <p class="shopI-price">R300.99</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -49,7 +52,7 @@
                 <h3 class="shop-item-title">Dress Up</h3>
                 <br>
                 <img class="shopItem-image portrait" src="./resources/shop-items/dressUp.jpg">
-                <p class="shopI-price">R23.99</p>
+                <p class="shopI-price">R239.99</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -57,7 +60,7 @@
                 <h3 class="shop-item-title">Boot</h3>
                 <br>
                 <img class="shopItem-image portrait" src="./resources/shop-items/boot.jpg">
-                <p class="shopI-price">R25.00</p>
+                <p class="shopI-price">R250.00</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -65,7 +68,7 @@
                 <h3 class="shop-item-title">Shoes</h3>
                 <br>
                 <img class="shopItem-image landscape" src="./resources/shop-items/shoes.jpg">
-                <p class="shopI-price">R30.99</p>
+                <p class="shopI-price">R330.99</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -73,7 +76,7 @@
                 <h3 class="shop-item-title">Walk</h3>
                 <br>
                 <img class="shopItem-image landscape" src="./resources/shop-items/walk.jpg">
-                <p class="shopI-price">R23.99</p>
+                <p class="shopI-price">R229.99</p>
                 <button class="btn add-btn">Add to Cart</button>
 
             </div>
@@ -104,7 +107,7 @@
                     <h3 id="cart-total-title">Total:</h3>
                     <p class="cart-total-amount">R0</p>
                 </div>
-                <button id="checkOut">Checkout</button>           <button id="close">Close</button>
+                <button id="checkOut">Checkout</button> 
             </div>
             <hr>
             <hr>
@@ -117,17 +120,18 @@
         <div class="left">
             <h3>About Us</h3>
             <p>
-
+                We strive to connect art enthusiasts with exceptional creations, <br>making it easier than ever to bring a touch of beauty and inspiration into your home.  <br>
+                Join us on this journey of exploration and discovery, <br>where every purchase supports the vision and dedication of our featured artist."
             </p>
         </div>
         <div class="right">
-            <h3>Contact</h3>
+            <h3 id="contact">Contact</h3>
             <p>
-                <strong>Call</strong>: 000-000-0000
+                <strong>Call</strong>: (012)-345-6789
                 <br>
-                <strong>Email</strong>: email@example.com
+                <strong>Email</strong>: email.contact@art.com
                 <br>
-                <strong>Comment</strong>:   <br>
+                <strong>Leave A Comment</strong>:   <br>
                 <textarea rows="3" cols="20"></textarea>    <br>
                 <button>submit</button>
             </p>
