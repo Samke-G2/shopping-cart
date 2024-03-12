@@ -17,7 +17,7 @@ header {
     cursor: pointer;
 }
 .logo:hover {
-    color: #ba91b6 ;
+    color: green ;
 }
 .logo span {
     font-family: "Belleza", sans-serif;
@@ -27,7 +27,7 @@ header {
     color: white;
 }
 #logo1:hover {
-    color: #ba91b6;
+    color: green;
 }
 #logo2 {
     font-family: "Playfair Display", serif;
@@ -36,7 +36,7 @@ header {
     color: white;
 }
 #logo3:hover {
-    color: #ba91b6;
+    color: green;
 }
 #period {
     font-size: 4em;
@@ -134,11 +134,15 @@ h1 {
     width: 300px;
     border: solid red 7px;
 }
+.shopI-price {
+    letter-spacing: 0.1em;
+}
 .add-btn {
     background-color: grey;
 }
 .add-btn:hover {
-    background-color: #fd9fd4;
+    color: white;
+    background-color: green;
     letter-spacing: 0.05em;
 }
 
@@ -211,7 +215,17 @@ h1 {
     display: inline-block;
     height: 5em;
     width: 7em;
-    background-color: gold;
+    color: black;
+    background-color: green;
+    margin-left: 46em;
+    border-radius: 35%;
+}
+#checkOut:hover {
+    display: inline-block;
+    height: 5em;
+    width: 7em;
+    color: white;
+    background-color: green;
     margin-left: 46em;
     border-radius: 35%;
 }
@@ -233,6 +247,7 @@ footer {
     text-decoration: underline;
 }
 .left p {
+    color: white;
     line-height: 1.5em;
     letter-spacing: 0.05em;
 }
@@ -252,6 +267,15 @@ footer {
 }
 .right span:hover {
     color: grey;
+}
+.right a {
+    color: white;
+}
+.right a:hover {
+    color: grey;
+}
+.submit {
+    background-color: grey;
 }
 .bottom {
     color: white;
