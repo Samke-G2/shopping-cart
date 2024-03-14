@@ -55,11 +55,11 @@ for (i =0; i < addToCartBtns.length; i++) {
         const imageSrc = shopItem.getElementsByClassName('shopItem-image')[0].src ;
         console.log(title, price, imageSrc) ;
         addItemToCart(title, price, imageSrc) ;
-        updateCartTotal () ;
+        updateCartTotal() ;
     })
 }
 
-//Adds items to cart, with proper classes
+// Adds items to cart, with proper classes
 const addItemToCart = (title, price, imageSrc) => {
     const cartRow = document.createElement('div') ;
     cartRow.classList.add('cart-item');
@@ -83,3 +83,13 @@ const addItemToCart = (title, price, imageSrc) => {
     cartRow.getElementsByClassName('remv-btn')[0].addEventListener('click', removeCartItem) ;
     cartRow.getElementsByClassName('item-quantity')[0].addEventListener('change', quantityChanged) ;
 }
+
+// Purchase button functionality
+document.getElementById('checkOut').addEventListener('click', checkOutClicked = (event) => {
+    alert('Thank you for your purchase.') ;
+    const cartItems = document.getElementsByClassName('cart-items')[0] ;
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild) ;
+    }
+    updateCartTotal() ;
+})
